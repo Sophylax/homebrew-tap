@@ -5,21 +5,21 @@
 class Envguard < Formula
   desc "Zero-config pre-commit secret scanner for Git repositories."
   homepage "https://github.com/Sophylax/envguard"
-  version "0.0.1-test1"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Sophylax/envguard/releases/download/v0.0.1-test1/envguard_0.0.1-test1_darwin_amd64.tar.gz"
-      sha256 "87a8d124e7d63cd0cb4902b0cc29d4d85ae119e0249bc4b5382f48b4912e50a1"
+      url "https://github.com/Sophylax/envguard/releases/download/v0.1.0/envguard_0.1.0_darwin_amd64.tar.gz"
+      sha256 "050ffbd4ae5e466a2aa7a41f3ef24c1cb7b193b86b468e94f2be5072f4d32f76"
 
       define_method(:install) do
         bin.install "envguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Sophylax/envguard/releases/download/v0.0.1-test1/envguard_0.0.1-test1_darwin_arm64.tar.gz"
-      sha256 "52edbc9b07e15bf55b41462ddca34b14ed4311e45d82cd83e3685cb749c3197c"
+      url "https://github.com/Sophylax/envguard/releases/download/v0.1.0/envguard_0.1.0_darwin_arm64.tar.gz"
+      sha256 "ce2083bdc8644427117cef7b2423f5500a3e95cb7b19ec1e2a20d6e379c87175"
 
       define_method(:install) do
         bin.install "envguard"
@@ -29,15 +29,15 @@ class Envguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sophylax/envguard/releases/download/v0.0.1-test1/envguard_0.0.1-test1_linux_amd64.tar.gz"
-      sha256 "a47add6fe8c3de9b8a9ca85a27feb2b030616c94c19da027ac8218cffe0bbe1e"
+      url "https://github.com/Sophylax/envguard/releases/download/v0.1.0/envguard_0.1.0_linux_amd64.tar.gz"
+      sha256 "1b7baaea3780540c77be148fe71d386807b828bb4f7561f90502c8c83c91f761"
       define_method(:install) do
         bin.install "envguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Sophylax/envguard/releases/download/v0.0.1-test1/envguard_0.0.1-test1_linux_arm64.tar.gz"
-      sha256 "afd6ca08fd9a566262e7cbe8047b76c6f763a213227229d787cad3c98824f744"
+      url "https://github.com/Sophylax/envguard/releases/download/v0.1.0/envguard_0.1.0_linux_arm64.tar.gz"
+      sha256 "42761658c45766cf2cd7233da4f5c1864683b6918a9d35384df0168290a117be"
       define_method(:install) do
         bin.install "envguard"
       end
